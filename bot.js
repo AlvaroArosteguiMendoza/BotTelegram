@@ -57,7 +57,7 @@ bot.onText(/\/naruto/, async (msg) => {
 Nombre: ${characterData.name}
 Sexo: ${characterData.personal.sex}
 Ocupación: ${characterData.personal.occupation}
-Afiliación: ${characterData.personal.affiliation.join(', ')}
+Afiliación: ${Array.isArray(characterData.personal.affiliation) ? characterData.personal.affiliation.join(', ') : characterData.personal.affiliation}
 Jutsu: ${characterData.jutsu.join(', ')}
 Imagen: ${characterData.images[0]}
 `;
